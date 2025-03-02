@@ -1,0 +1,18 @@
+ls
+dir
+pwd
+cd
+clear
+cls
+flet
+"C:\Users\Administrator\AppData\Local\Programs\Python\Python313\Scripts\flet.exe"
+fletw
+"C:\Users\Administrator\AppData\Local\Programs\Python\Python313\Scripts\flet.exe" run -w -p 80
+tpip
+python -m pip
+pyinstaller
+"C:\Users\Administrator\AppData\Local\Programs\Python\Python313\Scripts\pyinstaller.exe"
+pyi
+"C:\Users\Administrator\AppData\Local\Programs\Python\Python313\Scripts\pyinstaller.exe" --onefile --icon="C:\\Turk\\Temp\\Python\\MT.ico" --specpath "C:\\Windows\\temp" --distpath=.\\Output
+pyig
+"C:\Users\Administrator\AppData\Local\Programs\Python\Python313\Scripts\pyinstaller.exe" --onefile --noconsole --icon="C:\\Turk\\Temp\\Python\\MT.ico" --specpath "C:\\Windows\\temp" --distpath=.\\Output
