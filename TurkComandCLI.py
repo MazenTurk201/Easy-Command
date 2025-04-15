@@ -1,6 +1,55 @@
 from os import path,getcwd,system,name
 from sys import argv
 from winreg import OpenKey,HKEY_LOCAL_MACHINE,KEY_WRITE,SetValueEx,REG_SZ,CloseKey
+import ctypes
+import sys
+
+
+
+
+
+import requests
+from webbrowser import open_new_tab as lnk
+def check_update():
+    with open('version.txt', 'r') as file:
+        localVersion = file.read()
+
+    url = "https://raw.githubusercontent.com/MazenTurk201/Easy-Command/refs/heads/main/version.txt"
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        text_content = response.text
+        update = text_content.replace("\n", "")
+    except requests.exceptions.RequestException as e:
+        print(f"Error fetching the file: {e}")
+    if localVersion < update:
+    # if float(localVersion) < 1.2:
+        print(f"New version available: {update}v. Please update your software.")
+        lnk(f"https://github.com/MazenTurk201/Easy-Command/releases")
+        exit()
+
+def check_internet_connection():
+    try:
+        response = requests.get("https://www.google.com", timeout=5)
+        return True
+    except requests.ConnectionError:
+        return False
+    except requests.Timeout:
+        return False
+if check_internet_connection():
+    check_update()
+# input()
+
+def is_admin():
+    try:
+        return ctypes.windll.shell32.IsUserAnAdmin()
+    except:
+        return False
+def run_as_admin():
+    if not is_admin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+run_as_admin()
 
 def windowso(command, arg):
     cmd_file_path = path.expanduser("~\\aliass.bat")
@@ -66,7 +115,8 @@ def loopp():
                     system(f"echo 'alias {command}={arg}' >> ~/.bashrc")   # or ~/.zshrc for Zsh users
                     system("source ~/.bashrc")
             print("--------------")
-        except:pass
+        except KeyboardInterrupt:print("\n\n\n\t╭───────────────────────────────╮\n\t│ THX for using Easy Comand <3\" │\n\t╰───────────────────────────────╯");break
+
 
 try:
     if path.isfile(path.join(getcwd(),argv[1])):
