@@ -1,0 +1,8 @@
+turk
+echo Turk Sayes its work
+ls
+dir
+pwd
+cd
+clear
+cls
