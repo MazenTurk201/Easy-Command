@@ -24,7 +24,7 @@ Usage:
   python TurkComandCLI.py -h                      #Help Menu (This Page).
 ```
 ```bash
-  python TurkComandCLI.py "command" "argument"    #Run a command with an argument.
+  python TurkComandCLI.py command argument        #Run a command with an argument.
 ```
 ```bash
   python TurkComandCLI.py argument.txt            #Run a list with an argument.
