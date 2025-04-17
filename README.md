@@ -18,16 +18,16 @@ Go to Release to get the last update for [`Easy Command <3"`](https://github.com
 ## Usage
 Usage:
 ```bash
-  python TurkComandCLI.py                         Loop.
+  python TurkComandCLI.py                         #Loop.
 ```
 ```bash
-  python TurkComandCLI.py -h                      Help Menu (This Page).
+  python TurkComandCLI.py -h                      #Help Menu (This Page).
 ```
 ```bash
-  python TurkComandCLI.py "command" "argument"    Run a command with an argument.
+  python TurkComandCLI.py "command" "argument"    #Run a command with an argument.
 ```
 ```bash
-  python TurkComandCLI.py argument.txt            Run a list with an argument.
+  python TurkComandCLI.py argument.txt            #Run a list with an argument.
 ```
 Example:
 ```bash
